@@ -1,1 +1,57 @@
+.heading {
+  border-bottom: 1px solid rgba(41, 41, 41, 0.247);
+  padding: 1.05rem 2rem;
+  &__main {
+    font-size: 2rem;
+    font-family: "Poppins";
+  }
+  &__second {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Poppins";
+  }
+}
+.menu-container {
+  width: 100%;
+}
 
+.menu-header {
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.menu-list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toggle-icon {
+  transition: transform 0.2s;
+  font-size: 2rem;
+}
+
+.menu-list li {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menu-list li:last-child {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -5,8 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heet Sass Test 2</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
-  
+    <main class="main_container">
+      <div class="col_1">
+        <section class="col_1_section">
+          <div class="logo_container">
+            <img class="logo" src="images/logo.png" alt="logosection" />
+          </div>
+          <div class="icon_flex">
+            <ion-icon class="icons" name="home-outline"></ion-icon>
+            <ion-icon class="icons" name="people-outline"></ion-icon>
+            <ion-icon class="icons" name="calendar-outline"></ion-icon>
+            <ion-icon class="icons" name="checkbox-outline"></ion-icon>
+            <ion-icon class="icons" name="time-outline"></ion-icon>
+            <ion-icon class="icons" name="chatbubble-outline"></ion-icon>
+          </div>
+          <div class="black_logo">
+            <ion-icon class="black_icons" name="help-circle"></ion-icon>
+          </div>
+        </section>
+      </div>
+      <div class="col_2">
+        <article class="heading">
+          <h1 class="heading__main">Ziferblat</h1>
+          <h1 class="heading__second">Teamwork & time management</h1>
+        </article>
+
+        <section class="column-layout">
+          <div class="menu-container">
+            <div class="menu-header" onclick="toggleDropdown('list-1', this)">
+              Team
+              <ion-icon
+                class="toggle-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <ul class="menu-list" id="list-1">
+              <li>Tester</li>
+              <li>Developer</li>
+              <li>Add new member</li>
+            </ul>
+
+            <div class="menu-header" onclick="toggleDropdown('list-2', this)">
+              Projects
+              <ion-icon
+                class="toggle-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <ul class="menu-list" id="list-2">
+              <li>All projects (4)</li>
+              <li>Design system</li>
+              <li>User Flow</li>
+              <li>UX research</li>
+              <li>Add new project</li>
+            </ul>
+
+            <div class="menu-header" onclick="toggleDropdown('list-3', this)">
+              Tasks
+              <ion-icon
+                class="toggle-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <ul class="menu-list" id="list-3">
+              <li>All tasks (3)</li>
+              <li>New (1)</li>
+              <li>In progress (1)</li>
+              <li>Done (1)</li>
+              <li>Add new task</li>
+            </ul>
+          </div>
+
+          <div class="menu-header" onclick="toggleDropdown('list-4', this)">
+            Reminders
+            <ion-icon
+              class="toggle-icon"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </div>
+          <ul class="menu-list" id="list-4">
+            <li>Report</li>
+            <li>Add new reminder</li>
+          </ul>
+
+          <div class="menu-header" onclick="toggleDropdown('list-5', this)">
+            Messenger
+            <ion-icon
+              class="toggle-icon"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </div>
+          <ul class="menu-list" id="list-5">
+            <li>Jack (1)</li>
+            <li>Henry (1)</li>
+            <li>Tom (1)</li>
+            <li>Add new messenger</li>
+          </ul>
+        </section>
+      </div>
+      <div class="col_3">dfg</div>
+      <div class="col_4">ds</div>
+    </main>
+    <script>
+      function toggleDropdown(listId, headerElement) {
+        const dropdownList = document.getElementById(listId);
+        const toggleIcon = headerElement.querySelector(".toggle-icon");
+
+        if (dropdownList.style.display === "block") {
+          dropdownList.style.display = "none";
+          toggleIcon.setAttribute("name", "chevron-forward-outline");
+        } else {
+          dropdownList.style.display = "block";
+          toggleIcon.setAttribute("name", "chevron-down-outline");
+        }
+      }
+    </script>
   </body>
 </html>
