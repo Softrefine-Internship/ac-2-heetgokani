@@ -44,6 +44,10 @@ html {
   background-color: var(--lightyellow);
 }
 
+.icons:first-child {
+  background-color: var(--lightyellow);
+}
+
 .black_icons {
   color: black;
   width: 3.8rem;
@@ -70,7 +74,7 @@ html {
 }
 
 .menu-header {
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
   margin: 0;
   font-size: 1.8rem;
   font-weight: bold;
@@ -104,7 +108,7 @@ html {
 
 .menu-list li:last-child {
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .menu-list li:last-child:hover {
   cursor: pointer;
