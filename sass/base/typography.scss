@@ -55,3 +55,30 @@
     cursor: pointer;
   }
 }
+.today_date_heading {
+  color: black;
+  font-family: "Poppins";
+  font-size: 2.5rem;
+}
+.col_3_section {
+  padding: 1rem 2rem;
+}
+.col_3_heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0 0 0;
+}
+.recent_heading {
+  color: var(--black);
+  font-size: 1.8rem;
+  font-family: "Poppins";
+  font-weight: 700;
+  cursor: pointer;
+}
+.view_heading {
+  color: var(--orange);
+  font-size: 1.4rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  cursor: pointer;
+}

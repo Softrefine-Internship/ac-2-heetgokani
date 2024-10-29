@@ -1,0 +1,49 @@
+.first_card {
+  background-color: var(--lightpink);
+  height: 20rem;
+}
+.card2 {
+  background-color: var(--orange);
+  height: 20rem;
+}
+.card_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+}
+
+.first_icon {
+  background-color: black;
+  color: white;
+  padding: 1.8rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  z-index: 99;
+}
+.card_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user_img_section {
+  display: flex;
+}
+.user_1 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-left: -1.2rem;
+  z-index: 3;
+}
+.user_2 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-left: -1.2rem;
+  z-index: 1;
+}

@@ -114,6 +114,132 @@ html {
   cursor: pointer;
 }
 
+.today_date_heading {
+  color: black;
+  font-family: "Poppins";
+  font-size: 2.5rem;
+}
+
+.col_3_section {
+  padding: 1rem 2rem;
+}
+
+.col_3_heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0 0 0;
+}
+
+.recent_heading {
+  color: var(--black);
+  font-size: 1.8rem;
+  font-family: "Poppins";
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.view_heading {
+  color: var(--orange);
+  font-size: 1.4rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.first_card {
+  background-color: var(--lightpink);
+  height: 20rem;
+}
+
+.card2 {
+  background-color: var(--orange);
+  height: 20rem;
+}
+
+.card_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+}
+
+.first_icon {
+  background-color: black;
+  color: white;
+  padding: 1.8rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  z-index: 99;
+}
+
+.card_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user_img_section {
+  display: flex;
+}
+
+.user_1 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-left: -1.2rem;
+  z-index: 3;
+}
+
+.user_2 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-left: -1.2rem;
+  z-index: 1;
+}
+
+.search_box {
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 0.8rem;
+  border: 1px solid #d3d3d3;
+  margin: 1rem 0 0 0;
+}
+
+.icon_search {
+  color: #d3d3d3;
+  width: 2rem;
+  height: 2rem;
+}
+
+.input_search {
+  padding: 0.6rem;
+  font-size: 1.7rem;
+  outline: none;
+  flex: 1;
+  border: none;
+  color: #d3d3d3;
+}
+
+.search_button {
+  border: none;
+  display: flex;
+  padding: 0 0.5rem 0 1rem;
+  align-items: center;
+  background-color: transparent;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .main_container {
   display: grid;
   grid-template-columns: 6% 18% 46% 30%;
@@ -134,6 +260,7 @@ html {
 
 .col_4 {
   background-color: white;
+  box-shadow: 0.7rem 0.2rem 1.5rem 1.3rem rgba(150, 150, 150, 0.2);
 }
 
 .icon_flex {
