@@ -46,3 +46,29 @@
   height: calc(100vh - 7rem);
   overflow-y: auto;
 }
+.three_orange_dot {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+.orange_dot {
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: #f5a67986;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.orange_dot:first-child {
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: #f0894d;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -114,6 +114,15 @@ html {
   cursor: pointer;
 }
 
+.status_container {
+  width: 100%;
+  height: 0.8rem;
+  margin-top: 1rem;
+  background-color: rgba(77, 78, 74, 0.281);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
 .today_date_heading {
   color: black;
   font-family: "Poppins";
@@ -121,7 +130,11 @@ html {
 }
 
 .col_3_section {
+  width: 100%;
+  height: 100%;
+  height: calc(100vh - 0.2rem);
   padding: 1rem 2rem;
+  overflow-y: auto;
 }
 
 .col_3_heading {
@@ -146,14 +159,98 @@ html {
   cursor: pointer;
 }
 
-.first_card {
-  background-color: var(--lightpink);
-  height: 20rem;
+.design_system_heading {
+  margin-top: 3rem;
+  font-size: 2.1rem;
+  color: var(--black);
+  font-family: "Poppins";
+  font-weight: 600;
 }
 
-.card2 {
-  background-color: var(--orange);
-  height: 20rem;
+.deadline_heading {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--black);
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+.hours_heading {
+  margin-top: 12rem;
+  font-size: 1.1rem;
+  color: var(--black);
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.reminder_heading {
+  color: var(--black);
+  font-size: 1.8rem;
+  font-family: "Poppins";
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.reminder_section {
+  border: 2px solid #ccc;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tomorrow_heading {
+  color: #4e4b4b;
+  font-family: "Poppins";
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.reminder_flex_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.long_heading {
+  font-size: 1.7rem;
+  font-family: "Poppins";
+}
+
+.set_heading {
+  font-size: 1.3rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  border: 2px dashed #f0894d;
+  padding: 1rem;
+  border-radius: 3rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.set_heading:hover {
+  background-color: #f0894d;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.first_card {
+  background-color: var(--lightpink);
+  margin-top: 1rem;
+  border-radius: 2.5rem;
+}
+.first_card:hover {
+  cursor: pointer;
+}
+
+.second_card {
+  background-color: var(--yellow);
+  margin-top: 1rem;
+  border-radius: 2.5rem;
+}
+.second_card:hover {
+  cursor: pointer;
 }
 
 .card_section {
@@ -183,6 +280,12 @@ html {
   justify-content: space-between;
 }
 
+.status_fill {
+  height: 100%;
+  background-color: black;
+  border-radius: 1.5rem;
+}
+
 .user_img_section {
   display: flex;
 }
@@ -203,6 +306,64 @@ html {
   margin-left: -1.2rem;
   z-index: 1;
   border: 2px solid #fcbea4;
+}
+
+.two_dot_section {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dots {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--black);
+  border-radius: 50%;
+}
+
+.paddingcard {
+  padding: 3rem 2.5rem;
+}
+
+.second_icon {
+  background-color: #fce6bd;
+  color: var(--black);
+  padding: 1.6rem;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  z-index: 99;
+  border: 2px solid black;
+}
+
+.users_1 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-left: -1.5rem;
+  z-index: 3;
+  border: 2px solid #fce6bd;
+}
+
+.users_2 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-left: -1.2rem;
+  z-index: 1;
+  border: 2px solid #fce6bd;
+}
+
+.cardcenter {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .search_box {
@@ -230,7 +391,6 @@ html {
   outline: none;
   flex: 1;
   border: none;
-  color: #d3d3d3;
 }
 
 .search_button {
@@ -295,6 +455,35 @@ html {
   height: 100%;
   height: calc(100vh - 7rem);
   overflow-y: auto;
+}
+
+.three_orange_dot {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.orange_dot {
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: rgba(245, 166, 121, 0.5254901961);
+  border-radius: 50%;
+}
+.orange_dot:hover {
+  cursor: pointer;
+}
+
+.orange_dot:first-child {
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: #f0894d;
+  border-radius: 50%;
+}
+.orange_dot:first-child:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
