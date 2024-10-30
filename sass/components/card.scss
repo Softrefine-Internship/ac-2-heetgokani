@@ -4,6 +4,8 @@
   border-radius: 2.5rem;
   &:hover {
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
   }
 }
 .second_card {
@@ -12,6 +14,8 @@
   border-radius: 2.5rem;
   &:hover {
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
   }
 }
 .card_section {
@@ -115,4 +119,90 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.task_flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header_flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.task_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  margin: 1.2rem 0 0 0;
+  gap: 2rem;
+}
+.task_card_first {
+  background-color: #ecdabf88;
+  border-radius: 1.6rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.task_card_first:hover {
+  cursor: pointer;
+}
+.task_card_second {
+  background-color: white;
+  border-radius: 1.6rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.task_card_second:hover {
+  cursor: pointer;
+}
+.task_card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  height: 100%;
+}
+.task_heading {
+  text-align: left;
+  font-size: 1.4rem;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+.task_plus_icon {
+  width: 1.74rem;
+  height: 1.74rem;
+  align-self: flex-end;
+}
+.add_new_task {
+  padding: 3rem 2rem 2rem 2rem;
+}
+.task_status {
+  font-weight: 500;
+  font-family: "Poppins";
+  margin: 0 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+.status_dot {
+  background-color: var(--orange);
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+}
+.cyan {
+  background-color: cyan;
+}
+.orange {
+  background-color: var(--orange);
+}
+.white {
+  background-color: var(--white);
+}
+.sol {
+  justify-content: flex-start;
+}
+.black {
+  background-color: black;
+  width: 1.3rem;
+  height: 1.3rem;
 }

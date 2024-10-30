@@ -29,3 +29,29 @@
   height: 3.8rem;
   margin-bottom: 1rem;
 }
+.user_main_img {
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 50%;
+  margin-left: 1.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.last_orange_icon {
+  color: #f0894d;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0.1rem;
+}
+.many_user_img {
+  width: 5.7rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.last_icon {
+  color: white;
+}

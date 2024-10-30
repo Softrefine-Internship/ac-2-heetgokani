@@ -54,6 +54,12 @@
   width: 100%;
   justify-content: center;
 }
+.project_details {
+  font-size: 1.8rem;
+  color: black;
+  font-family: "Poppins";
+  font-weight: 700;
+}
 .orange_dot {
   height: 0.7rem;
   width: 0.7rem;
@@ -71,4 +77,90 @@
   &:hover {
     cursor: pointer;
   }
+}
+.notif_alert_dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: var(--orange);
+  position: absolute;
+  top: 26%;
+  left: 54%;
+  border-radius: 50%;
+}
+.user_name_section {
+  padding: 0 0 0.5rem 0.8rem;
+}
+.main_three_orange_dot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  margin-top: 1.75rem;
+  width: 100%;
+  justify-content: right;
+}
+.main_orange_dot {
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: #f0894d;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.four_element_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.2rem 0;
+}
+.three_element_flex {
+  display: flex;
+  align-items: center;
+}
+.last_orange_icon_section {
+  background-color: #d8d5d583;
+  border-radius: 50%;
+  border: 1px solid var(--orange);
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.many_user_img_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.plus_icon {
+  color: #f0894d;
+  width: 3rem;
+  height: 3rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.plus_icon_section {
+  display: flex;
+  align-items: center;
+  background-color: #e4e0e08c;
+  border-radius: 50%;
+  border: 2px dashed var(--orange);
+}
+.project_section {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 3rem 0 0 0;
+  padding: 2.3rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.7rem;
+}
+.daily_task_flex {
+  display: flex;
+  padding: 2rem 0;
+  align-items: center;
+  justify-content: space-between;
 }
