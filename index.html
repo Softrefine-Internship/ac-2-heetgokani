@@ -27,6 +27,51 @@
     ></script>
   </head>
   <body>
+    <main class="first_flex">
+      <article class="heading">
+        <h1 class="heading__main">Ziferblat</h1>
+        <h1 class="heading__second">Teamwork & time management</h1>
+      </article>
+      <div class="three_element_flex">
+        <div class="notif_icon_container">
+          <ion-icon class="notif_icon" name="notifications-outline"></ion-icon>
+          <span>
+            <div class="notif_alert_dot"></div>
+          </span>
+        </div>
+        <img
+          class="user_main_img"
+          src="images/many_faces_10.jpg"
+          alt="user main image"
+        />
+        <section class="user_name_section">
+          <h1 class="user_heading">User</h1>
+          <h1 class="user_name">Maria</h1>
+        </section>
+        <main class="last_orange_icon_section_first whitebg">
+          <ion-icon
+            class="last_orange_icon blackbg"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </main>
+      </div>
+    </main>
+    <div class="column_1">
+      <section class="first_col">
+        <div class="flex_icon">
+          <ion-icon class="icons" name="home-outline"></ion-icon>
+          <ion-icon class="icons" name="people-outline"></ion-icon>
+          <ion-icon class="icons" name="calendar-outline"></ion-icon>
+          <ion-icon class="icons" name="checkbox-outline"></ion-icon>
+          <ion-icon class="icons" name="time-outline"></ion-icon>
+          <ion-icon
+            class="icons"
+            name="chatbubble-outline"
+            onclick="toggleColnav()"
+          ></ion-icon>
+        </div>
+      </section>
+    </div>
     <main class="main_container">
       <div class="col_1">
         <section class="col_1_section">
@@ -46,6 +91,96 @@
           </div>
         </section>
       </div>
+      <div class="column hide">
+        <section class="column-layout">
+          <div class="menu-container">
+            <div
+              class="menu-header"
+              onclick="toggleDropdown('dropdown-team', this)"
+            >
+              Team
+              <ion-icon
+                class="toggle-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <ul class="menu-list" id="dropdown-team">
+              <li>Tester</li>
+              <li>Developer</li>
+              <li>Add new member</li>
+            </ul>
+
+            <div
+              class="menu-header"
+              onclick="toggleDropdown('dropdown-projects', this)"
+            >
+              Projects
+              <ion-icon
+                class="toggle-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <ul class="menu-list" id="dropdown-projects">
+              <li>All projects (4)</li>
+              <li>Design system</li>
+              <li>User Flow</li>
+              <li>UX research</li>
+              <li>Add new project</li>
+            </ul>
+
+            <div
+              class="menu-header"
+              onclick="toggleDropdown('dropdown-tasks', this)"
+            >
+              Tasks
+              <ion-icon
+                class="toggle-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <ul class="menu-list" id="dropdown-tasks">
+              <li>All tasks (3)</li>
+              <li>New (1)</li>
+              <li>In progress (1)</li>
+              <li>Done (1)</li>
+              <li>Add new task</li>
+            </ul>
+          </div>
+
+          <div
+            class="menu-header"
+            onclick="toggleDropdown('dropdown-reminders', this)"
+          >
+            Reminders
+            <ion-icon
+              class="toggle-icon"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </div>
+          <ul class="menu-list" id="dropdown-reminders">
+            <li>Report</li>
+            <li>Add new reminder</li>
+          </ul>
+
+          <div
+            class="menu-header"
+            onclick="toggleDropdown('dropdown-messenger', this)"
+          >
+            Messenger
+            <ion-icon
+              class="toggle-icon"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </div>
+          <ul class="menu-list" id="dropdown-messenger">
+            <li>Jack (1)</li>
+            <li>Henry (1)</li>
+            <li>Tom (1)</li>
+            <li>Add new messenger</li>
+          </ul>
+        </section>
+      </div>
+
       <div class="col_2">
         <article class="heading">
           <h1 class="heading__main">Ziferblat</h1>
@@ -356,7 +491,7 @@
                     ></ion-icon>
                   </div>
                 </div>
-                <h1 class="task_detail white_text">Make fixes in home page.</h1>
+                <h1 class="task_detail white_text">Make fixes in home page</h1>
               </div>
             </div>
           </section>
@@ -364,16 +499,31 @@
       </div>
     </main>
     <script>
-      function toggleDropdown(listId, headerElement) {
-        const dropdownList = document.getElementById(listId);
-        const toggleIcon = headerElement.querySelector(".toggle-icon");
+      function toggleDropdown(titleId, titleElement) {
+        const dropdown = document.getElementById(titleId);
+        const icon = titleElement.querySelector(".icon");
 
-        if (dropdownList.style.display === "block") {
-          dropdownList.style.display = "none";
-          toggleIcon.setAttribute("name", "chevron-forward-outline");
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+          icon.setAttribute("name", "chevron-forward-outline");
         } else {
-          dropdownList.style.display = "block";
-          toggleIcon.setAttribute("name", "chevron-down-outline");
+          dropdown.style.display = "block";
+          icon.setAttribute("name", "chevron-down-outline");
+        }
+      }
+
+      function toggleColnav() {
+        const column = document.querySelector(".column");
+        const chatBubbleIcon = document.querySelector(
+          '.chat-icon[name="chatbubble-outline"]'
+        );
+
+        if (column) {
+          column.classList.toggle("hide");
+        }
+
+        if (chatBubbleIcon) {
+          chatBubbleIcon.classList.toggle("chaticon");
         }
       }
     </script>

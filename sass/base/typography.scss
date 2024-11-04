@@ -1,6 +1,11 @@
 .heading {
-  border-bottom: 1px solid rgba(41, 41, 41, 0.247);
-  padding: 1.05rem 2rem;
+  border-bottom: 1px solid #2929293f;
+  padding: 1.45rem 2rem;
+  height: 7rem;
+  @media (min-width: 0px) and (max-width: 768px) {
+    border: none;
+  }
+
   &__main {
     font-size: 2rem;
     font-family: "Poppins";
@@ -8,6 +13,8 @@
   &__second {
     font-size: 1.2rem;
     font-weight: 400;
+    line-height: 0.8;
+    padding: 0;
     font-family: "Poppins";
   }
 }
@@ -84,6 +91,11 @@
   height: calc(100vh - 0.2rem);
   padding: 1rem 2rem;
   overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 15rem;
+  @media (min-width: 0px) and (max-width: 560px) {
+    padding-bottom: 0.5rem;
+  }
 }
 .notif_icon {
   width: 2.2rem;

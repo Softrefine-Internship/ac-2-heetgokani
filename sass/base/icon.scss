@@ -48,10 +48,27 @@
   width: 5.7rem;
   height: 5.6rem;
   border-radius: 50%;
+  @media (min-width: 2027px) and (max-width: 2700px) {
+    width: 6rem;
+    height: 6rem;
+  }
+  @media (min-width: 1939px) and (max-width: 2027px) {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
   &:hover {
     cursor: pointer;
   }
 }
 .last_icon {
   color: white;
+}
+.whitebg {
+  background-color: white;
+}
+.blackbg {
+  color: black;
+}
+.chaticon {
+  background-color: var(--lightyellow);
 }
