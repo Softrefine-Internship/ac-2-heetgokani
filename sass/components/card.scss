@@ -67,7 +67,68 @@
   z-index: 1;
   border: 2px solid #fcbea4;
 }
+.checkbox-wrapper input {
+  display: none;
+}
 
+.checkbox-wrapper .checkbox-mark {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--orange);
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  border-radius: 25%;
+  cursor: pointer;
+}
+.checkbox-wrapper input:checked + .checkbox-mark {
+  background-color: var(--orange);
+}
+.checkbox-wrapper input:checked + .checkbox-mark::after {
+  content: "✔";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+}
+.task_card_second {
+  position: relative;
+}
+.rotated-bar {
+  background-color: transparent;
+  position: absolute;
+  width: 15px;
+  height: 80px;
+  transform: rotate(-30deg);
+}
+.rotated-bar.secondary {
+  border: 1px solid var(--orange);
+  width: 15px;
+  left: 3rem;
+  top: 10.1rem;
+  transform: rotate(60deg);
+}
+.rotated-bar:first-child {
+  top: 6rem;
+  transform: rotate(60deg);
+  left: -2rem;
+  border: 1px solid var(--orange);
+}
+.rotated-bar.final {
+  left: 2rem;
+  transform: rotate(60deg);
+  top: 7rem;
+  border: 1px solid var(--orange);
+}
+
+.second {
+  background-color: white;
+  &:hover {
+    background-color: var(--lightyellow);
+  }
+}
 .two_dot_section {
   display: flex;
   gap: 0.5rem;
@@ -133,7 +194,7 @@
 }
 .task_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   margin: 1.2rem 0 0 0;
   gap: 2rem;
 }
@@ -156,11 +217,13 @@
   cursor: pointer;
 }
 .task_card_content {
+  padding: 1rem 1.5rem;
+  height: 13rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  height: 100%;
+  @media (min-width: 350px) and (max-width: 540px) {
+    height: 10rem;
+  }
 }
 .task_heading {
   text-align: left;

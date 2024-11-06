@@ -1,3 +1,18 @@
+.cross_flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &_cross_icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    transition: all 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+}
+
 .logo {
   width: 100%;
   height: 6rem;
@@ -38,12 +53,26 @@
     cursor: pointer;
   }
 }
-.last_orange_icon {
+.icon-section--last-orange {
+  background-color: #d8d5d583;
+  border-radius: 50%;
+  border: 1px solid var(--orange);
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.icon-section--last-orange:hover {
+  cursor: pointer;
+}
+
+.icon-section__icon--last-orange {
   color: #f0894d;
   width: 1.6rem;
   height: 1.6rem;
   padding: 0.1rem;
 }
+
 .many_user_img {
   width: 5.7rem;
   height: 5.6rem;
@@ -71,4 +100,11 @@
 }
 .chaticon {
   background-color: var(--lightyellow);
+}
+li {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateX(1rem);
+    font-weight: bold;
+  }
 }

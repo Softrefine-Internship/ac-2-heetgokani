@@ -59,9 +59,9 @@
     <div class="column_1">
       <section class="first_col">
         <div class="flex_icon">
-          <ion-icon class="icons" name="home-outline"></ion-icon>
-          <ion-icon class="icons" name="people-outline"></ion-icon>
-          <ion-icon class="icons" name="calendar-outline"></ion-icon>
+          <ion-icon class="icons" name="home"></ion-icon>
+          <ion-icon class="icons second" name="people-outline"></ion-icon>
+          <ion-icon class="icons second" name="calendar-outline"></ion-icon>
           <ion-icon class="icons" name="checkbox-outline"></ion-icon>
           <ion-icon class="icons" name="time-outline"></ion-icon>
           <ion-icon
@@ -94,6 +94,13 @@
       <div class="column hide">
         <section class="column-layout">
           <div class="menu-container">
+            <section class="cross_flex">
+              <ion-icon
+                class="cross_flex_cross_icon"
+                name="close-circle-outline"
+                onclick="hideColumn()"
+              ></ion-icon>
+            </section>
             <div
               class="menu-header"
               onclick="toggleDropdown('dropdown-team', this)"
@@ -120,7 +127,7 @@
                 name="chevron-forward-outline"
               ></ion-icon>
             </div>
-            <ul class="menu-list" id="dropdown-projects">
+            <ul class="menu-list" id="dropdown-projects" style="display: block">
               <li>All projects (4)</li>
               <li>Design system</li>
               <li>User Flow</li>
@@ -138,7 +145,7 @@
                 name="chevron-forward-outline"
               ></ion-icon>
             </div>
-            <ul class="menu-list" id="dropdown-tasks">
+            <ul class="menu-list" id="dropdown-tasks" style="display: block">
               <li>All tasks (3)</li>
               <li>New (1)</li>
               <li>In progress (1)</li>
@@ -209,7 +216,7 @@
                 name="chevron-forward-outline"
               ></ion-icon>
             </div>
-            <ul class="menu-list" id="list-2">
+            <ul class="menu-list" id="list-2" style="display: block">
               <li>All projects (4)</li>
               <li>Design system</li>
               <li>User Flow</li>
@@ -224,7 +231,7 @@
                 name="chevron-forward-outline"
               ></ion-icon>
             </div>
-            <ul class="menu-list" id="list-3">
+            <ul class="menu-list" id="list-3" style="display: block">
               <li>All tasks (3)</li>
               <li>New (1)</li>
               <li>In progress (1)</li>
@@ -365,7 +372,7 @@
           </main>
           <section class="four_element_flex">
             <h1 class="project_heading">Add Project</h1>
-            <div class="three_element_flex">
+            <div class="three_element_flex_2">
               <div class="notif_icon_container">
                 <ion-icon
                   class="notif_icon"
@@ -385,9 +392,9 @@
                 <h1 class="user_name_section__name">Maria</h1>
               </section>
 
-              <main class="last_orange_icon_section">
+              <main class="icon-section icon-section--last-orange">
                 <ion-icon
-                  class="last_orange_icon"
+                  class="icon-section__icon icon-section__icon--last-orange"
                   name="chevron-down-outline"
                 ></ion-icon>
               </main>
@@ -458,10 +465,48 @@
             <!-- Card 2 -->
             <div class="task_card_second">
               <div class="task_card_content">
+                <div class="decorative-line">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 400 50"
+                    width="100%"
+                    height="50"
+                    class="decorative-line-svg"
+                  >
+                    <path
+                      d="M0 25 Q 50 -25, 100 25 Q 150 75, 200 25 Q 250 -25, 300 25 Q 350 75, 400 25"
+                      fill="transparent"
+                      stroke="#f0894d"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <div class="decorative-line rotated">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 400 50"
+                    width="100%"
+                    height="50"
+                    class="decorative-line-svg"
+                  >
+                    <path
+                      d="M0 25 Q 50 -25, 100 25 Q 150 75, 200 25 Q 250 -25, 300 25 Q 350 75, 400 25"
+                      fill="transparent"
+                      stroke="#f0894d"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+
                 <div class="header_flex">
                   <div class="status_dot"></div>
                   <h1 class="task_status">New</h1>
-                  <div class="indicator_box"></div>
+                  <div class="indicator_box">
+                    <label class="checkbox-wrapper">
+                      <input type="checkbox" />
+                      <span class="checkbox-mark"></span>
+                    </label>
+                  </div>
                 </div>
                 <h1 class="task_detail">Change color palette to more bright</h1>
               </div>
@@ -470,11 +515,19 @@
           <!-- Card 3 -->
           <section class="task_container">
             <div class="task_card_second">
+              <div class="rotated-bar"></div>
+              <div class="rotated-bar secondary"></div>
+              <div class="rotated-bar final"></div>
               <div class="task_card_content sol">
                 <div class="header_flex">
                   <div class="status_dot cyan"></div>
                   <h1 class="task_status">In progress</h1>
-                  <div class="indicator_box"></div>
+                  <div class="indicator_box">
+                    <label class="checkbox-wrapper">
+                      <input type="checkbox" />
+                      <span class="checkbox-mark"></span>
+                    </label>
+                  </div>
                 </div>
                 <h1 class="task_detail">Mobile prototype for mobile version</h1>
               </div>
@@ -482,6 +535,9 @@
             <!-- Card 4 -->
             <div class="task_card_second orange">
               <div class="task_card_content sol">
+                <div class="circle-shape"></div>
+                <div class="circle-shape secondary"></div>
+                <div class="circle-shape final"></div>
                 <div class="header_flex">
                   <div class="status_dot white"></div>
                   <h1 class="task_status white_text">Done</h1>
@@ -503,7 +559,6 @@
       function toggleDropdown(titleId, titleElement) {
         const dropdown = document.getElementById(titleId);
         const icon = titleElement.querySelector(".icon");
-
         if (dropdown.style.display === "block") {
           dropdown.style.display = "none";
           icon.setAttribute("name", "chevron-forward-outline");
@@ -512,19 +567,22 @@
           icon.setAttribute("name", "chevron-down-outline");
         }
       }
-
       function toggleColnav() {
         const column = document.querySelector(".column");
         const chatBubbleIcon = document.querySelector(
-          '.chat-icon[name="chatbubble-outline"]'
+          '.icons[name="chatbubble-outline"]'
         );
-
         if (column) {
           column.classList.toggle("hide");
         }
-
         if (chatBubbleIcon) {
           chatBubbleIcon.classList.toggle("chaticon");
+        }
+      }
+      function hideColumn() {
+        const column = document.querySelector(".column");
+        if (column) {
+          column.classList.add("hide");
         }
       }
     </script>
