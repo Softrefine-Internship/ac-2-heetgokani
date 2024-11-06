@@ -463,14 +463,18 @@ html {
   justify-content: center;
 }
 
-.user_heading {
+.user_name_section {
+  padding: 0 0 0.5rem 0.8rem;
+}
+
+.user_name_section__heading {
   color: #a8a5a5;
   font-size: 1.1rem;
   font-family: "Poppins";
   font-weight: 500;
 }
 
-.user_name {
+.user_name_section__name {
   font-size: 1.4rem;
   font-family: "Poppins";
 }
