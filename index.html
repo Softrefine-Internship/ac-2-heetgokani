@@ -92,15 +92,19 @@
         </section>
       </div>
       <div class="column hide">
+        <section class="cross_flex">
+          <article class="heading">
+            <h1 class="heading__main">Ziferblat</h1>
+            <h1 class="heading__second">Teamwork & time management</h1>
+          </article>
+          <ion-icon
+            class="cross_flex_cross_icon"
+            name="close-circle-outline"
+            onclick="hideColumn()"
+          ></ion-icon>
+        </section>
         <section class="column-layout">
           <div class="menu-container">
-            <section class="cross_flex">
-              <ion-icon
-                class="cross_flex_cross_icon"
-                name="close-circle-outline"
-                onclick="hideColumn()"
-              ></ion-icon>
-            </section>
             <div
               class="menu-header"
               onclick="toggleDropdown('dropdown-team', this)"
@@ -124,7 +128,7 @@
               Projects
               <ion-icon
                 class="toggle-icon"
-                name="chevron-forward-outline"
+                name="chevron-down-outline"
               ></ion-icon>
             </div>
             <ul class="menu-list" id="dropdown-projects" style="display: block">
@@ -142,7 +146,7 @@
               Tasks
               <ion-icon
                 class="toggle-icon"
-                name="chevron-forward-outline"
+                name="chevron-down-outline"
               ></ion-icon>
             </div>
             <ul class="menu-list" id="dropdown-tasks" style="display: block">
@@ -213,7 +217,7 @@
               Projects
               <ion-icon
                 class="toggle-icon"
-                name="chevron-forward-outline"
+                name="chevron-down-outline"
               ></ion-icon>
             </div>
             <ul class="menu-list" id="list-2" style="display: block">
@@ -228,7 +232,7 @@
               Tasks
               <ion-icon
                 class="toggle-icon"
-                name="chevron-forward-outline"
+                name="chevron-down-outline"
               ></ion-icon>
             </div>
             <ul class="menu-list" id="list-3" style="display: block">
@@ -548,7 +552,7 @@
                     ></ion-icon>
                   </div>
                 </div>
-                <h1 class="task_detail white_text">Make fixes in home pages</h1>
+                <h1 class="task_detail white_text">Make fixes in home page</h1>
               </div>
             </div>
           </section>
@@ -558,7 +562,7 @@
     <script>
       function toggleDropdown(titleId, titleElement) {
         const dropdown = document.getElementById(titleId);
-        const icon = titleElement.querySelector(".icon");
+        const icon = titleElement.querySelector(".toggle-icon");
         if (dropdown.style.display === "block") {
           dropdown.style.display = "none";
           icon.setAttribute("name", "chevron-forward-outline");

@@ -1,7 +1,8 @@
 .cross_flex {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+
   &_cross_icon {
     height: 2.5rem;
     width: 2.5rem;
@@ -12,6 +13,7 @@
     }
   }
 }
+
 .changebackground {
   background-color: var(--lightyellow);
 }
@@ -113,4 +115,7 @@ li {
     transform: translateX(1rem);
     font-weight: bold;
   }
+}
+.cross_flex {
+  border-bottom: 1px solid #ccc;
 }
