@@ -241,7 +241,6 @@ li {
 }
 li:hover {
   transform: translateX(1rem);
-  font-weight: bold;
 }
 
 .heading {
