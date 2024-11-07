@@ -567,22 +567,53 @@
           icon.setAttribute("name", "chevron-down-outline");
         }
       }
+
       function toggleColnav() {
         const column = document.querySelector(".column");
         const chatBubbleIcon = document.querySelector(
           '.icons[name="chatbubble-outline"]'
         );
+
         if (column) {
           column.classList.toggle("hide");
-        }
-        if (chatBubbleIcon) {
-          chatBubbleIcon.classList.toggle("chaticon");
+          chatBubbleIcon.classList.toggle("changebackground");
+
+          if (!column.classList.contains("hide")) {
+            document.addEventListener("click", outsideClickListener);
+          } else {
+            document.removeEventListener("click", outsideClickListener);
+          }
         }
       }
+
       function hideColumn() {
         const column = document.querySelector(".column");
+        const chatBubbleIcon = document.querySelector(
+          '.icons[name="chatbubble-outline"]'
+        );
+
         if (column) {
           column.classList.add("hide");
+        }
+        if (chatBubbleIcon) {
+          chatBubbleIcon.classList.remove("changebackground");
+        }
+        document.removeEventListener("click", outsideClickListener);
+      }
+
+      function outsideClickListener(event) {
+        const column = document.querySelector(".column");
+        const chatBubbleIcon = document.querySelector(
+          '.icons[name="chatbubble-outline"]'
+        );
+
+        if (
+          column &&
+          !column.contains(event.target) &&
+          !chatBubbleIcon.contains(event.target) &&
+          !column.classList.contains("hide")
+        ) {
+          hideColumn();
         }
       }
     </script>

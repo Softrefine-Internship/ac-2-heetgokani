@@ -11,17 +11,17 @@ html {
 }
 @media (min-width: 1940px) and (max-width: 2700px) {
   html {
-    font-size: 95%;
+    font-size: 70%;
   }
 }
 @media (min-width: 1700px) and (max-width: 1939px) {
   html {
-    font-size: 80%;
+    font-size: 60%;
   }
 }
 @media (min-width: 1450px) and (max-width: 1700px) {
   html {
-    font-size: 80%;
+    font-size: 60%;
   }
 }
 @media (min-width: 1350px) and (max-width: 1490px) {
@@ -133,6 +133,10 @@ html {
   transform: scale(1.2);
 }
 
+.changebackground {
+  background-color: var(--lightyellow);
+}
+
 .logo {
   width: 100%;
   height: 6rem;
@@ -216,6 +220,12 @@ html {
     height: 5.5rem;
   }
 }
+@media (min-width: 1489px) and (max-width: 1550px) {
+  .many_user_img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .many_user_img:hover {
   cursor: pointer;
 }
@@ -241,6 +251,7 @@ li {
 }
 li:hover {
   transform: translateX(1rem);
+  font-weight: bold;
 }
 
 .heading {
@@ -1038,6 +1049,9 @@ li:hover {
   background-color: var(--lightyellow);
   z-index: 999999;
   height: 100vh;
+  position: fixed;
+  top: 6rem;
+  height: calc(100vh - 20px);
 }
 @media (min-width: 768px) and (max-width: 3000px) {
   .column {
@@ -1046,33 +1060,21 @@ li:hover {
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .column {
-    position: absolute;
-    top: 8%;
-    left: 0;
     width: 20%;
   }
 }
 @media (min-width: 500px) and (max-width: 675px) {
   .column {
-    position: absolute;
-    top: 8%;
-    left: 0;
     width: 30%;
   }
 }
 @media (min-width: 400px) and (max-width: 500px) {
   .column {
-    position: absolute;
-    top: 8%;
-    left: 0;
     width: 40%;
   }
 }
 @media (min-width: 300px) and (max-width: 400px) {
   .column {
-    position: absolute;
-    top: 8%;
-    left: 0;
     width: 50%;
   }
 }
@@ -1310,6 +1312,7 @@ li:hover {
   align-items: center;
   gap: 0.5rem;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .plus_icon {
